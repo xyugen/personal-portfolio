@@ -2,3 +2,79 @@
 @import url('./reset.css');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@300;400;500;600&display=swap');
 
+/* DEFAULTS */
+:root {
+    --clr-primary: #11ce3e;
+    --clr-secondary: ;
+    --clr-bg: #010e1b;
+    --clr-fg: #dee2e6;
+
+    --txt-primary: 'Poppins', sans-serif;
+    --txt-secondary: 'Open Sans', sans-serif;
+
+    --transition: all .25s;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+}
+
+::selection {
+    background: var(--clr-primary);
+    color: var(--clr-bg);
+    /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: var(--clr-primary);
+    color: var(--clr-bg);
+    /* Gecko Browsers */
+}
+
+body {
+    background-color: var(--clr-bg);
+    color: var(--clr-fg);
+    font-family: var(--txt-secondary);
+
+    background-image: url('./layered-steps-haikei.svg');
+    background-size: cover;
+
+    font-size: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--txt-primary);
+}
+
+a {
+    color: var(--clr-fg);
+    text-decoration: none;
+}
+
+.text-important {
+    color: var(--clr-primary);
+}
+
+.btn {
+    border: 2px solid var(--clr-primary);
+    padding: 10px 15px;
+
+    font-family: var(--txt-primary);
+    font-weight: lighter;
+    font-size: 15px;
+
+}
+
+.btn:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-bg);
+
+    transition: var(--transition);
+}
