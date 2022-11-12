@@ -78,3 +78,75 @@ a {
 
     transition: var(--transition);
 }
+
+/* CONTENT */
+.main-container {
+    padding: 2em 10%;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 2em;
+}
+
+header>ul,
+header>nav>ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    list-style: none;
+    padding: 0;
+
+    font-family: var(--txt-primary);
+    font-size: 18px;
+}
+
+nav {
+    color: var(--clr-bg) !important;
+}
+
+/* MAIN */
+main {
+    margin: 5em 0;
+}
+
+/* ABOUT */
+.about {
+    margin: 2em 0;
+}
+
+.about>*:not(:first-child):not(:last-child) {
+    margin: 1rem 0;
+}
+
+.about-title {
+    margin-bottom: 2rem;
+    font-size: 48pt;
+}
+
+.about-desc {
+    font-size: 17px;
+    font-weight: lighter;
+    max-width: 35rem;
+}
+
+.about-btn {
+    margin: 3rem 0;
+}
+
+.about-btn>*:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* PROJECTS */
+.projects {
+    margin-top: 6em;
+}
+
+.projects-title {
+    text-align: center;
+}
