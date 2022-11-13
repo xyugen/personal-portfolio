@@ -126,7 +126,7 @@ header > nav {
 }
 
 .hamburger .bar, .hamburger::after, .hamburger::before {
-    content: ' ';
+    content: '';
     display: block;
     width: 110%;
     height: 4px;
@@ -149,36 +149,36 @@ header > nav {
 
 .mobile-nav {
     display: block;
-    position: fixed;
-    top: 0;
-    left: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
     width: 100%;
-    min-height: 100vh;
+    min-height: 30vh;
     z-index: 98;
-    background-color: #041a30;
-    padding-top: 120px;
+    background-color: #031526;
+    box-shadow: 0 5px 5px 1px #02111ea5;
+    padding: 2em 0;
 
     transition: var(--transition);
 }
 
 .mobile-nav.is-active {
-    left: 0;
+    top: 0;
 }
 
 .mobile-nav > a {
     display: block;
     width: 100%;
     max-width: 200px;
-    margin: 0 auto 16px;
+    margin: 0 auto;
     text-align: center;
-    padding: 12 16px;
-    background-color: #06213c;
+    padding: 12px 0;
 
     color: var(--clr-fg);
 }
 
-.mobile-nav > a:hover {
-    background-color: #072849;
+.mobile-nav > a:not(:last-child) {
+    border-bottom: 1px solid #143455;
 }
 
 @media only screen and (min-width: 768px) {
@@ -260,5 +260,9 @@ main {
     
     .desktop-nav {
         display: none;
+    }
+
+    .card-img {
+        max-width: 320px;
     }
 }
