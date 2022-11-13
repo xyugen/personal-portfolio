@@ -109,8 +109,86 @@ header>nav>ul {
     font-size: 18px;
 }
 
-nav {
-    color: var(--clr-bg) !important;
+header > nav {
+    z-index: 99;
+}
+
+.hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.hamburger .bar, .hamburger::after, .hamburger::before {
+    content: ' ';
+    display: block;
+    width: 110%;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: var(--transition);
+}
+
+.hamburger.is-active::before {
+    transform: rotate(-45deg) translate(-8px, 7px);
+}
+
+.hamburger.is-active::after {
+    transform: rotate(45deg) translate(-7px, -7px);
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+.mobile-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 98;
+    background-color: #041a30;
+    padding-top: 120px;
+
+    transition: var(--transition);
+}
+
+.mobile-nav.is-active {
+    left: 0;
+}
+
+.mobile-nav > a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12 16px;
+    background-color: #06213c;
+
+    color: var(--clr-fg);
+}
+
+.mobile-nav > a:hover {
+    background-color: #072849;
+}
+
+@media only screen and (min-width: 768px) {
+    .mobile-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
 }
 
 /* MAIN */
@@ -175,8 +253,12 @@ main {
     object-fit: cover;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
     body {
         background-image: none;
+    }
+    
+    .desktop-nav {
+        display: none;
     }
 }
