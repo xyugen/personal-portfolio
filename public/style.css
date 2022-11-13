@@ -224,14 +224,15 @@ main {
     margin-right: 10px;
 }
 
+.section-title {
+    text-align: center;
+}
+
 /* PROJECTS */
 .projects {
     margin-top: 6em;
 }
 
-.projects-title {
-    text-align: center;
-}
 /* CARD */
 .cards {
     display: flex;
@@ -250,7 +251,10 @@ main {
     width: 600px;
     height: 337px;
     image-rendering: optimizeQuality;
-    object-fit: cover;
+    object-fit: contain;
+
+    background-color: #031526;
+    border-radius: 15px;
 }
 
 @media only screen and (max-width: 768px) {
