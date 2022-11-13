@@ -33,13 +33,18 @@
     /* Gecko Browsers */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--clr-bg);
     color: var(--clr-fg);
     font-family: var(--txt-secondary);
 
-    background-image: url('./layered-steps-haikei.svg');
-    background-size: cover;
+    background-image: url('./assets/layered-steps-haikei.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
 
     font-size: 20px;
 }
@@ -70,13 +75,12 @@ a {
     font-weight: lighter;
     font-size: 15px;
 
+    transition: var(--transition);
 }
 
 .btn:hover {
     background-color: var(--clr-primary);
     color: var(--clr-bg);
-
-    transition: var(--transition);
 }
 
 /* CONTENT */
@@ -149,4 +153,30 @@ main {
 
 .projects-title {
     text-align: center;
+}
+/* CARD */
+.cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.card:nth-child(odd) {
+    justify-content: left;
+}
+
+.card:nth-child(even) {
+    justify-content: right;
+}
+
+.card-img {
+    width: 600px;
+    height: 337px;
+    image-rendering: optimizeQuality;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        background-image: none;
+    }
 }
